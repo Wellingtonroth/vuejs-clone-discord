@@ -1,6 +1,7 @@
 <template>
-  <div class="serverbutton" :class="{'serverbutton-hasNotification' : hasNotification}">
+  <div class="serverbutton" :class="{'serverbutton-isHome' : isHome, 'serverbutton-hasNotification' : hasNotification}">
 
+  <div class="mentions" v-if="mentions">{{ mentions }}</div>
   </div>
 </template>
 
@@ -34,6 +35,31 @@ export default {
   &:hover {
     border-radius: 16px;
     background-color: var(--discord);
+  }
+
+  .mentions {
+    background-color: var(--notification);
+    width: auto;
+    height: 24px;
+    padding: 0 4px;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    border-radius: 12px;
+    border: solid 4px var(--quaternary);
+    text-align: right;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--white);
+  }
+}
+
+.serverbutton-isHome {
+  background-color: var(--rocketseat);
+  &.active,
+  &:hover {
+    border-radius: 16px;
+    background-color: var(--rocketseat);
   }
 }
 

@@ -8,6 +8,7 @@
       <ServerButton :mentions="32" hasNotification />
       <ServerButton :mentions="4"/>
       <ServerButton hasNotification/>
+      <ServerButton v-for="servers in 18" :key="servers.id"/>
     </div>
   </div>
 </template>
@@ -33,6 +34,10 @@ export default {
   background-color: var(--tertiary);
   padding: 11px 0;
   max-height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .separator {
