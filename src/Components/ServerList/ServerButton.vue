@@ -6,14 +6,14 @@
 </template>
 
 <script>
-export default {
-  props: {
-    selected: Boolean,
-    isHome: Boolean,
-    hasNotification: Boolean,
-    mentions: Number
-  }
-};
+  export default {
+    props: {
+      selected: Boolean,
+      isHome: Boolean,
+      hasNotification: Boolean,
+      mentions: Number
+    }
+  };
 </script>
 
 <style scoped lang="scss">
